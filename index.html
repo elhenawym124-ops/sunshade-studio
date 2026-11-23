@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ستوديو الستائر — باترونات الإنتاج</title>
+<meta name="description" content="مكتبة فريمات ومولّد باترونات ستائر سيارات بمقاس 1:1 مع أوامر شغل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">RL</span>
+      <div>
+        <h1>ستوديو الستائر</h1>
+        <p>فريمات · باترونات 1:1 · أوامر شغل</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="btn" data-action="import-json">استيراد ملف</button>
+      <button class="btn btn-primary" data-action="export-json">تصدير البيانات</button>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="أقسام الأداة">
+    <button class="tab" data-tab="frames">الفريمات</button>
+    <button class="tab" data-tab="sets">الأطقم</button>
+    <button class="tab" data-tab="pattern">الباترون</button>
+    <button class="tab" data-tab="order">أمر شغل</button>
+  </nav>
+
+  <main id="view" class="view"></main>
+
+  <footer class="foot">
+    <span>البيانات محفوظة على الجهاز. اعمل تصدير نسخة احتياطية كل فترة.</span>
+    <span class="mono">v1.0</span>
+  </footer>
+</div>
+
+<div id="printArea" class="print-area" aria-hidden="true"></div>
+<dialog id="dialog" class="dialog"></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="geometry.js"></script>
+<script src="data.js"></script>
+<script src="exporters.js"></script>
+<script src="views.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
